@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<Product>;
 
 <div class="row pb-3">
+    
     @foreach (var product in Model)
     {
         <div class="col-lg-3 col-sm-6">
@@ -21,7 +22,7 @@
                             </div>
                         </div>
                         <div>
-                            <a asp-area="Customer" asp-controller="Home" asp-action="Details" asp-route-product_Id="@product.Id"
+                            <a asp-area="Customer" asp-controller="Home" asp-action="Details" asp-route-productId="@product.Id"
                                class="byn btn-primary bg-gradient border-0 form-control">
                                 Details
                             </a>
