@@ -128,7 +128,8 @@ namespace LibraryWeb.Areas.Customer.Controllers
             {
                 //it is a regular customer and we need to capture payment(order status kya hoga)
                 //Stripe logic
-                var domain = "https://localhost:7204/";
+                //var domain = "https://localhost:7204/";
+                var domain = Request.Scheme+"://"+Request.Host.Value+"/";
                 var options = new Stripe.Checkout.SessionCreateOptions
                 {
                     SuccessUrl = domain + $"customer/cart/OrderConfirmation?id={ShoppingCartVM.OrderHeader.Id}",
