@@ -77,7 +77,7 @@ app.MapControllerRoute(
 
 app.Run();
 
-//This is some test changes
+
 void SeedDatabase()
 {
     using (var scope = app.Services.CreateScope()) {
