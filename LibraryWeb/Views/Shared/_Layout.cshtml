@@ -66,20 +66,20 @@
                         }
                         @* @if (HttpContextAccessor.HttpContext.Session.GetInt32(SD.SessionCart) != null)
                         {
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="Customer" asp-controller="Cart" asp-action="Index">
-                                    <i class="bi bi-cart"></i> &nbsp;
-                                    (@HttpContextAccessor.HttpContext.Session.GetInt32(SD.SessionCart))
-                                </a>
-                            </li>
+                        <li class="nav-item">
+                        <a class="nav-link" asp-area="Customer" asp-controller="Cart" asp-action="Index">
+                        <i class="bi bi-cart"></i> &nbsp;
+                        (@HttpContextAccessor.HttpContext.Session.GetInt32(SD.SessionCart))
+                        </a>
+                        </li>
                         }
                         else
                         { *@
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="Customer" asp-controller="Cart" asp-action="Index">
-                                    @await Component.InvokeAsync("ShoppingCart")
-                                </a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Customer" asp-controller="Cart" asp-action="Index">
+                                @await Component.InvokeAsync("ShoppingCart")
+                            </a>
+                        </li>
                         @* } *@
                     </ul>
                     <partial name="_LoginPartial" />
@@ -107,6 +107,8 @@
     <script src="//cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js" asp-append-version="true"></script>
     @* SweetAlert *@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @* toaster Notification *@
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script> 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

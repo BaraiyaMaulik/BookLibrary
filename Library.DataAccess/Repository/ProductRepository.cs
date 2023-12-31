@@ -37,10 +37,11 @@ namespace Library.DataAccess.Repository
                 objFromDb.Price100 = obj.Price100;
                 objFromDb.ListPrice= obj.ListPrice;
                 objFromDb.CategoryId=obj.CategoryId;
-                if(obj.ImageUrl != null)
-                {
-                    objFromDb.ImageUrl = obj.ImageUrl;  
-                }
+                objFromDb.ProductImages = obj.ProductImages;
+                //if(obj.ImageUrl != null)
+                //{
+                //    objFromDb.ImageUrl = obj.ImageUrl;  
+                //}
             }              
             //_db.Products.Update(obj);
         }

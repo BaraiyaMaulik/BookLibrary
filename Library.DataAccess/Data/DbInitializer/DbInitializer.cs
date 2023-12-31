@@ -54,7 +54,7 @@ namespace Library.DataAccess.Data.DbInitializer
                 //if roles are not created, then we will create admin user as well
                 _userManager.CreateAsync(new ApplicationUser
                 {
-                    UserName = "admin@dotnetmastery.com",
+                    UserName = "admin@dotnetmaulik.com",
                     Email = "admin@dotnetmastery.com",
                     Name = "Bhrugen Patel",
                     PhoneNumber = "1112223333",
@@ -64,7 +64,7 @@ namespace Library.DataAccess.Data.DbInitializer
                     City = "Chicago"
                 }, "Admin@123").GetAwaiter().GetResult();
 
-                ApplicationUser user = _db.ApplicationUsers.FirstOrDefault(u => u.Email == "admin@dotnetmastery.com");
+                ApplicationUser user = _db.ApplicationUsers.FirstOrDefault(u => u.Email == "admin@dotnetmaulik.com");
                 _userManager.AddToRoleAsync(user, SD.Role_Admin).GetAwaiter().GetResult();
 
             }
